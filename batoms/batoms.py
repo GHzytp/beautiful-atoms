@@ -1841,5 +1841,7 @@ class Batoms(BaseCollection, ObjectGN):
             bpy.ops.export_scene.x3d(filepath=filename, use_selection=True)
         elif filename.endswith('.obj') or filename.endswith('.mtl'):
             bpy.ops.export_scene.obj(filepath=filename, use_selection=True)
+        elif filename.endswith('.fbx'):
+            bpy.ops.export_scene.fbx(filepath=filename, use_selection=True)
         else:
             raise('File format %s is not supported.' % filename)
